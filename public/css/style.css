@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+    display: grid;
+    background-color: black;
+}
+
+#container {
+    background-color: #855E42;
+    color: white;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    border: 10px solid #4c3523;
+}
+
+#container span:not(.star) {
+    display: block;
+}
+
+#container .header {
+    font-size: 50px;
+}
+
+#container .name {
+    color: yellow;
+    font-size: 30px;
+    cursor: pointer
+}
+
+#container img {
+    cursor: pointer;
+}
+
+#container .refresh {
+    cursor: pointer;
+    color: black;
+    font-size: 50px;
+}
+
+.newRecipe {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+.prepareTime {
+    position: absolute;
+}
+
+.recipeCount {
+    color: black;
+    margin-top: 15px;
+    font-weight: italic;
+}
+
+/** Rating **/
+.rating {
+    margin-top: -40px;
+}
+
+.star {
+    font-size: x-large;
+    width: 30px;
+    display: inline-block;
+    color: gray;
+}
+
+.star:last-child {
+    margin-right: 0;
+}
+
+.star:before {
+    content:'\2605';
+}
+
+.star.on {
+    color: gold;
+}
+
+.star.half:after {
+    content:'\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -24px;
+    width: 12.5px;
+    overflow: hidden;
+}
+
+.enterIconContainer:after {
+    content: '\027B2';
+    font-size: 100px;
+    margin-top: 50px;
+    margin-left: -30px;
+    color: white;
+    position: absolute;
+    opacity: 0.75;
+}

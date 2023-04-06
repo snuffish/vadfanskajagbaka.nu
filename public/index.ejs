@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/public/css/style.css"/>
+        <link rel="stylesheet" href="/public/css/modal.css"/>
+        <style>
+            body {
+                background-image: url(<%=recipe.backgroundUrl%>);
+            }
+        </style>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script defer async  src="/public/js/index.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F869RVZDT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2F869RVZDT');
+        </script>
+
+        <script data-ad-client="ca-pub-8672635421690861" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onClick="toggleSettings()">&times;</span>
+                    <h2>About</h2>
+                </div>
+                <div class="modal-body">
+                    Snuffish @ snuffish90@gmail.com
+                </div>
+            </div>
+        </div>
+
+        <div id="aboutBtnContainer" onclick="toggleSettings()">
+            <img src="/public/img/aboutIcon.png">
+        </div>
+
+        <div id="container">
+            <span class="header">Du kan väl förfan baka en Jävla</span>
+            <span class="name" onClick="openUrl('<%=recipe.url%>')"><%=recipe.name%> <% if (recipe.prepareTime) { %>(<%=recipe.prepareTime%>)<% } %></span>
+            <span class="enterIconContainer" onClick="openUrl('<%=recipe.url%>')"></span>
+            <img onClick="openUrl('<%=recipe.url%>')" src="<%=recipe.imageUrl%>"/>
+
+            <div class="rating">
+                <% for (const star of rating) { %>
+                    <span class="star <%=star%>"></span>
+                <% } %>
+            </div>
+            <div>
+                <button class="newRecipe" onCLick="window.location.reload()">BAKA NÅGOT ANNAT SKIT DÅ!</button>
+            </div>
+            <span class="recipeCount">Urval från <strong><%=recipeCount%>st</strong> recept</span>
+            
+        </div>
+    </body>
+</html>
